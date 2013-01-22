@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Test Redam</title>
+        <link rel="stylesheet" href="http://rurounize.my.phpcloud.com/testdb/css/bootstrap.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="page_header">
+                    <h1>Test de Entradas a la BD</h1>
+                </div>
+                <p>Cantidad de Datos a insertar <?php echo $this->registros ?></p>
+                <div class="alert alert-success"><strong>Crear <?php echo $this->registros ?> registros tomo:</strong> <?php echo $this->tiempo ?> Segundos.</div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>pregunta_id</th>
+                            <th>sucursal_id</th>
+                            <th>aspecto_id</th>
+                            <th>supervisor_id</th>
+                            <th>fecha</th>
+                            <th>value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($this->datos as $row ): ?>
+                        <tr>
+                            <td><?php echo $row->id ?></td>
+                            <td><?php echo $row->pregunta_id ?></td>
+                            <td><?php echo $row->sucursal_id ?></td>
+                            <td><?php echo $row->aspecto_id ?></td>
+                            <td><?php echo $row->supervisor_id ?></td>
+                            <td><?php echo $row->fecha ?></td>
+                            <td><?php echo $row->val ?></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
